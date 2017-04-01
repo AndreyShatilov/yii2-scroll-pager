@@ -268,6 +268,11 @@ class ScrollPager extends Widget
             $this->triggerText = Yii::t('kop\y2sp', 'Load more items');
         }
 
+        // Set default previous trigger text if not set
+        if ($this->triggerTextPrev === null) {
+            $this->triggerText = Yii::t('kop\y2sp', 'Load previous items');
+        }
+
         // Set default "none left" message text if not set
         if ($this->noneLeftText === null) {
             $this->noneLeftText = Yii::t('kop\y2sp', 'You reached the end');
